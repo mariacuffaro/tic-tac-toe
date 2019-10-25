@@ -10,9 +10,12 @@ describe Game do
   it 'has a board' do
     expect(subject.board).to eq([['_','_','_'],['_','_','_'],['_','_','_']])
   end
-  it 'updates the board after each turn' do
+  it 'updates the first row if player sets row to 1' do
     subject.play(1,2)
     expect(subject.board).to eq([['_','X','_'],['_','_','_'],['_','_','_']])
   end
-  
+  it 'updates the second row if player sets row to 2' do
+    subject.play(2,2)
+    expect(subject.board).to eq([['_','_','_'],['_','X','_'],['_','_','_']])
+  end
 end

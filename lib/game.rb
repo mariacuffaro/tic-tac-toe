@@ -7,7 +7,7 @@ class Game
   end
 
   def play(row,column)
-    @board = [['_','X','_'],['_','_','_'],['_','_','_']]
+    @board[row-1][column-1] = 'X'
   end
 
 end
