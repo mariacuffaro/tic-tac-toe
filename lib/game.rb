@@ -14,7 +14,11 @@ class Game
       @board[row-1][column-1] = 'X'
     end
     @count += 1
-    @board
+    if @board[0][0] == @board[1][1] && @board[1][1] == @board[2][2]
+      "player1 wins"
+    else
+      @board
+    end
   end
 
 end

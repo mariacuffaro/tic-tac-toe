@@ -26,4 +26,11 @@ describe Game do
   it 'outputs the board after each turn' do
     expect(subject.play(1,1)).to eq([['X','_','_'],['_','_','_'],['_','_','_']])
   end
+  it 'is over if player has won' do
+    subject.play(2,2)
+    subject.play(1,3)
+    subject.play(1,1)
+    subject.play(2,3)
+    expect(subject.play(3,3)).to eq 'player1 wins'
+  end
 end
