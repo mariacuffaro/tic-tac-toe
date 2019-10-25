@@ -16,9 +16,23 @@ The rules of tic-tac-toe are as follows:
 
 Build the business logic for a game of tic tac toe. It should be easy to implement a working game of tic tac toe by combining your code with any user interface, whether web or command line.
 
-## User Stories
+## Approach
 ```
-As a User
-I want to add two players to the game
-So that the game can start
+game = Game.new() gives new game with two players and empty board
+p1 = 'X'
+p2 = 'O'
+board = [['_','_','_'],['_','_','_'],['_','_','_']]
+game.play(1,2) updates board as follows
+[['_','X','_'],['_','_','_'],['_','_','_']]
+game.play(1,1)updates board as follows
+[['O','X','_'],['_','_','_'],['_','_','_']]
+game.over? is true if any of the following conditions are met
+board[0][0] == board[0][1] == board[0][2]
+board[1][0] == board[1][1] == board[1][2]
+board[2][0] == board[2][1] == board[2][2]
+board[0][0] == board[1][0] == board[2][0] 
+board[0][1] == board[1][1] == board[2][1]
+board[0][2] == board[1][2] == board[2][2]
+board[0][0] == board[1][1] == board[2][2]
+board[0][2] == board[1][1] == board[2][0]  
 ```
