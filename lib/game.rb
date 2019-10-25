@@ -4,10 +4,16 @@ class Game
     @player1 = 'X'
     @player2 = 'O'
     @board = [['_','_','_'],['_','_','_'],['_','_','_']]
+    @count = 1
   end
 
   def play(row,column)
-    @board[row-1][column-1] = 'X'
+    if @count % 2 == 0
+      @board[row-1][column-1] = 'O'
+    else
+      @board[row-1][column-1] = 'X'
+    end
+    @count += 1
   end
 
 end

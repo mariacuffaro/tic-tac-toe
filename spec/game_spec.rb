@@ -18,4 +18,9 @@ describe Game do
     subject.play(2,2)
     expect(subject.board).to eq([['_','_','_'],['_','X','_'],['_','_','_']])
   end
+  it 'updates the with O for player 2' do
+    subject.play(2,2)
+    subject.play(1,3)
+    expect(subject.board).to eq([['_','_','O'],['_','X','_'],['_','_','_']])
+  end
 end
