@@ -5,4 +5,9 @@ class Game
     @player2 = 'O'
     @board = [['_','_','_'],['_','_','_'],['_','_','_']]
   end
+
+  def play(row,column)
+    @board = [['_','X','_'],['_','_','_'],['_','_','_']]
+  end
+
 end
