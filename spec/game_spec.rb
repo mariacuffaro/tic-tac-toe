@@ -23,4 +23,7 @@ describe Game do
     subject.play(1,3)
     expect(subject.board).to eq([['_','_','O'],['_','X','_'],['_','_','_']])
   end
+  it 'outputs the board after each turn' do
+    expect(subject.play(1,1)).to eq([['X','_','_'],['_','_','_'],['_','_','_']])
+  end
 end

@@ -14,6 +14,7 @@ class Game
       @board[row-1][column-1] = 'X'
     end
     @count += 1
+    @board
   end
 
 end
